@@ -1,5 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions provide the data structure and operations for a cached version
+## of a matrix.
+##
+##  Inverse - This is the only operation at this time. 
 
 ## This function will create a cached version of a matrix using the <<- operator.
 ## Matrix retrievals will be much faster using this cached version.
@@ -24,7 +26,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## This function assumes that the input Matrix is square and invertible.
 
 cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
+    ## Returns a matrix that is the inverse of 'x'
+    
     i <- x$getinverse()
     if(!is.null(i)) {
         message("getting cached data")
